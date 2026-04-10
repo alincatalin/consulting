@@ -94,7 +94,27 @@
     .pill-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--green); animation: pulse 1.8s ease-in-out infinite; }
     h1 { margin: 22px 0 0; max-width: 900px; font-size: clamp(42px, 7vw, 72px); line-height: 1.02; letter-spacing: -0.04em; }
     .accent-green { color: var(--green); }
-    .hero-copy { max-width: 720px; margin-top: 24px; font-size: 18px; line-height: 1.9; color: var(--muted-2); }
+    .hero-copy { max-width: 760px; margin-top: 24px; font-size: 18px; line-height: 1.9; color: var(--muted-2); }
+    .why-me {
+      max-width: 760px;
+      margin-top: 22px;
+      padding: 18px 20px;
+      border: 1px solid rgba(125,211,252,0.16);
+      border-radius: 22px;
+      background: rgba(125,211,252,0.06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .why-me-copy {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #e2e8f0;
+    }
+    .why-me-copy-secondary {
+      margin-top: 8px;
+      color: var(--muted-2);
+    }
     .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
     .button {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px;
@@ -262,8 +282,8 @@
             <div class="brand">
               <div class="brand-mark">A</div>
               <div>
-                <div class="brand-title">Alin Postolache — Mobile + AI Engineering</div>
-                <div class="brand-subtitle">KMP / Compose Multiplatform / Android / iOS / AI features, automations & workflows</div>
+                <div class="brand-title">Alin Postolache — AI + Mobile Product Engineering</div>
+                <div class="brand-subtitle">AI systems & workflows / KMP / Compose Multiplatform / Android / iOS</div>
               </div>
             </div>
             <nav class="nav">
@@ -277,19 +297,29 @@
             <div class="reveal is-visible">
               <div class="pill">
                 <span class="pill-dot"></span>
-                Founder-led mobile AI engineering
+                Founder-led AI + mobile engineering
               </div>
 
-              <h1>Ship <span class="accent-green">AI features</span> in mobile products without doubling your team.</h1>
+              <h1>Build useful <span class="accent-green">AI systems</span> into your product — without slowing down delivery.</h1>
 
               <p class="hero-copy">
-                I help startups and product teams build practical AI-powered mobile experiences using Kotlin
-                Multiplatform, Compose Multiplatform, Android, and iOS — without forcing a rewrite or sacrificing
-                native quality where it matters.
+                I help product teams design and ship AI features, workflows, copilots, and internal tools — while also
+                bringing the mobile and cross-platform depth needed when those systems have to live inside Android and iOS products.
               </p>
 
+              <div class="why-me reveal stagger-1">
+                <p class="why-me-copy">
+                  I’m Alin Postolache, a senior engineer with 10+ years building production products across Android,
+                  cross-platform systems, and AI-driven experiences.
+                </p>
+                <p class="why-me-copy why-me-copy-secondary">
+                  I help teams turn AI into something operational: clearer workflows, less friction, better execution,
+                  and mobile delivery that does not collapse into a rewrite.
+                </p>
+              </div>
+
               <div class="actions">
-                <a class="button button-primary" href="#contact">Book a fit call <span aria-hidden="true">→</span></a>
+                <a class="button button-primary" href="#contact">Book a 30-minute fit call <span aria-hidden="true">→</span></a>
                 <a class="button button-secondary" href="#offers">See offers</a>
               </div>
 
@@ -315,12 +345,10 @@
                 </div>
                 <div class="terminal-body">
                   <div class="terminal-line" style="animation-delay: 120ms;"><div><span class="prompt">$</span> <span class="command">whoami</span></div><div class="output">senior_mobile_engineer + ai_product_builder</div></div>
-                  <div class="terminal-line" style="animation-delay: 220ms;"><div><span class="prompt">$</span> <span class="command">focus</span></div><div class="output">android / ios / kmp / compose / practical ai</div></div>
-                  <div class="terminal-line" style="animation-delay: 320ms;"><div><span class="prompt">$</span> <span class="command">philosophy</span></div><div class="output">share code where it creates leverage. stay native where quality matters.</div></div>
-                  <div class="terminal-line" style="animation-delay: 420ms;"><div><span class="prompt">$</span> <span class="command">ideal_clients</span></div><div class="output">startups, product teams, mobile-heavy saas, teams adding ai</div></div>
-                  <div class="terminal-line" style="animation-delay: 520ms;"><div><span class="prompt">$</span> <span class="command">anti-patterns</span></div><div class="output">architecture theater, fake ai, duplicate platform work</div></div>
-                  <div class="terminal-line" style="animation-delay: 620ms;"><div><span class="prompt">$</span> <span class="command">next_step</span></div><div class="output">book a fit call → scope one sharp wedge → ship</div></div>
-
+                  <div class="terminal-line" style="animation-delay: 220ms;"><div><span class="prompt">$</span> <span class="command">focus</span></div><div class="output">ai workflows / copilots / android / ios / kmp</div></div>
+                  <div class="terminal-line" style="animation-delay: 320ms;"><div><span class="prompt">$</span> <span class="command">philosophy</span></div><div class="output">use ai where it creates leverage. keep systems practical and close to the workflow.</div></div>
+                  <div class="terminal-line" style="animation-delay: 420ms;"><div><span class="prompt">$</span> <span class="command">next_step</span></div><div class="output">30-minute fit call → clear next step → ship</div></div>
+                  
                   <div class="terminal-mode">
                     <div class="label">Current mode</div>
                     <div class="value">Building mobile systems that feel native and move like a smaller team should.</div>
@@ -336,8 +364,8 @@
         <div class="container">
           <div class="stats-grid">
             <div class="stat-card green reveal"><div class="stat-value">10+</div><div class="stat-label">Years in mobile engineering</div></div>
-            <div class="stat-card blue reveal stagger-1"><div class="stat-value">Android + iOS</div><div class="stat-label">Cross-platform without fake shortcuts</div></div>
-            <div class="stat-card orange reveal stagger-2"><div class="stat-value">AI + product</div><div class="stat-label">Built for features people actually use</div></div>
+            <div class="stat-card blue reveal stagger-1"><div class="stat-value">AI + delivery</div><div class="stat-label">Systems that help teams move faster</div></div>
+            <div class="stat-card orange reveal stagger-2"><div class="stat-value">KMP + iOS</div><div class="stat-label">Cross-platform depth with native quality where needed</div></div>
           </div>
         </div>
       </section>
@@ -346,41 +374,38 @@
         <div class="container">
           <div class="section-header reveal">
             <div class="eyebrow">Offers</div>
-            <h2>Start narrow. Ship fast. Expand only when the product earns it.</h2>
-            <p class="section-text">The model is simple: begin with a clear technical wedge, validate real product value, then scale the implementation without accumulating platform debt.</p>
+            <h2>Get the right AI and product-system work shipped — without creating a bigger mess underneath.</h2>
+            <p class="section-text">Whether you need one sharp AI workflow, a better internal system, or stronger Android and iOS execution around the product, the goal is the same: move faster now without paying for bad technical decisions later.</p>
           </div>
 
           <div class="offers-grid">
             <article class="card offer-card reveal">
               <div class="offer-glow green"></div>
-              <div class="offer-head"><div><div class="offer-title">Mobile AI Kickstart</div><div class="offer-duration">1–2 weeks</div></div><div class="price-pill">€3k–€6k</div></div>
+              <div class="offer-head"><div><div class="offer-title">AI Workflow Kickstart</div><div class="offer-duration">1–2 weeks • best for one clear bottleneck</div></div><div class="price-pill">€3k–€6k</div></div>
               <ul class="list-reset">
-                <li class="list-item"><span class="bullet"></span><span>Audit your current mobile stack and delivery bottlenecks</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Identify the highest-leverage AI feature worth shipping first</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Define KMP / Compose Multiplatform fit vs native escape hatches</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Deliver a concrete implementation plan or a thin vertical slice</span></li>
+                <li class="list-item"><span class="bullet"></span><span>Useful when your team knows something is blocked, but not which technical path actually makes sense.</span></li>
+                <li class="list-item"><span class="bullet"></span><span>I review the current workflow, product goal, and where execution is slowing down — whether that lives in the team, the tooling, or the Android and iOS surface.</span></li>
+                <li class="list-item"><span class="bullet"></span><span>You leave with one clear recommendation, a realistic implementation path, and a smaller surface area to get wrong.</span></li>
               </ul>
             </article>
 
             <article class="card offer-card featured reveal stagger-1">
               <div class="offer-glow blue"></div>
-              <div class="offer-head"><div><div class="offer-title">Fractional Mobile + AI Lead</div><div class="offer-duration">Monthly</div></div><div class="price-pill">€8k/mo</div></div>
+              <div class="offer-head"><div><div class="offer-title">Fractional AI + Product Systems Lead</div><div class="offer-duration">Monthly • best for teams that need senior hands-on help</div></div><div class="price-pill">€6k–€12k/mo</div></div>
               <ul class="list-reset">
-                <li class="list-item"><span class="bullet"></span><span>Hands-on implementation, architecture, and technical product guidance</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Ship AI workflows like voice, summaries, chat, search, copilots</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Reduce Android / iOS duplication without forcing a rewrite</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Unblock teams that need speed, not architecture theater</span></li>
+                <li class="list-item"><span class="bullet"></span><span>Useful when the roadmap is moving, the team is busy, and nobody has enough senior bandwidth to make the hard calls and still ship.</span></li>
+                <li class="list-item"><span class="bullet"></span><span>I work hands-on across architecture, implementation, product tradeoffs, and AI tooling so the team can move faster without building disconnected systems.</span></li>
+                <li class="list-item"><span class="bullet"></span><span>Strong fit for AI features, operator workflows, cross-platform direction, or teams that need sharper execution without adding a full extra hire.</span></li>
               </ul>
             </article>
 
             <article class="card offer-card reveal stagger-2">
               <div class="offer-glow orange"></div>
-              <div class="offer-head"><div><div class="offer-title">Platform Migration Sprint</div><div class="offer-duration">Project-based</div></div><div class="price-pill">€8k–€20k+</div></div>
+              <div class="offer-head"><div><div class="offer-title">Platform or Workflow Migration Sprint</div><div class="offer-duration">Project-based • best for teams paying the cost of duplicated work</div></div><div class="price-pill">€8k–€20k</div></div>
               <ul class="list-reset">
-                <li class="list-item"><span class="bullet"></span><span>Shared domain and data layer strategy for Android + iOS</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Proof-of-concept module to validate migration risk early</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Pragmatic plan for what to share and what to keep native</span></li>
-                <li class="list-item"><span class="bullet"></span><span>Built for teams already feeling the cost of duplicated effort</span></li>
+                <li class="list-item"><span class="bullet"></span><span>Useful when the team is solving the same problem twice — across Android and iOS, or across manual workflows that should already be systemized.</span></li>
+                <li class="list-item"><span class="bullet"></span><span>I help define what should actually be shared, what should stay native, and how to test that path before the team commits too much.</span></li>
+                <li class="list-item"><span class="bullet"></span><span>The goal is not to chase AI or cross-platform for its own sake. It is to remove waste without hurting product quality or team speed.</span></li>
               </ul>
             </article>
           </div>
@@ -392,19 +417,19 @@
           <div class="approach-grid">
             <div class="section-header reveal">
               <div class="eyebrow">Approach</div>
-              <h2>A strong point of view beats a generic service menu.</h2>
-              <p class="section-text">Most teams either bolt on a fake AI feature nobody retains, or overbuild mobile architecture before proving value. The better path is narrower: choose the right workflow, share code where it creates leverage, and keep native control where quality matters.</p>
+              <h2>Strong systems beat scattered tools.</h2>
+              <p class="section-text">Most teams either add AI in a way that never becomes part of the real workflow, or they overbuild the system before proving value. The better path is narrower: identify the friction, design the right loop, and only then decide what should be automated, shared, or kept native.</p>
             </div>
 
             <div class="capabilities-grid">
               <div class="card capability-card reveal"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Kotlin Multiplatform architecture</span></div><div class="capability-divider"></div></div>
               <div class="card capability-card reveal stagger-1"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Compose Multiplatform UI strategy</span></div><div class="capability-divider"></div></div>
               <div class="card capability-card reveal stagger-2"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Android + iOS delivery acceleration</span></div><div class="capability-divider"></div></div>
-              <div class="card capability-card reveal stagger-3"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">AI features in mobile products</span></div><div class="capability-divider"></div></div>
-              <div class="card capability-card reveal stagger-4"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Voice, chat, search, summaries, copilots</span></div><div class="capability-divider"></div></div>
+              <div class="card capability-card reveal stagger-3"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">AI workflows inside real products</span></div><div class="capability-divider"></div></div>
+              <div class="card capability-card reveal stagger-4"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Copilots, chat, search, summaries, assistants</span></div><div class="capability-divider"></div></div>
               <div class="card capability-card reveal stagger-5"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Shared vs native boundary decisions</span></div><div class="capability-divider"></div></div>
               <div class="card capability-card reveal stagger-6"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Feature prototyping and migration planning</span></div><div class="capability-divider"></div></div>
-              <div class="card capability-card reveal stagger-7"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Senior technical guidance for product teams</span></div><div class="capability-divider"></div></div>
+              <div class="card capability-card reveal stagger-7"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Operator-minded technical guidance</span></div><div class="capability-divider"></div></div>
             </div>
           </div>
         </div>
@@ -415,16 +440,18 @@
           <div class="section-header reveal">
             <div class="eyebrow">Selected work</div>
             <h2>Proof, not promises.</h2>
-            <p class="section-text">A mix of large-scale product engineering, founder-built apps, and practical AI work inside real mobile experiences.</p>
+            <p class="section-text">A mix of large-scale product engineering, founder-built products, AI workflow thinking, and systems built close to the real work.</p>
           </div>
 
           <div class="work-proof-grid">
-            <article class="card proof-card reveal stagger-1"><div class="proof-label">Consumer mobile at scale</div><h3 class="proof-title">Freshful by eMAG</h3><p class="proof-copy">Worked on the biggest e-groceries mobile with production constraints, fast iteration, and the kind of engineering quality bar that only shows up when the app actually matters to the business.</p></article>
-            <article class="card proof-card reveal stagger-2"><div class="proof-label">Health-focused product engineering</div><h3 class="proof-title">Zero Longevity</h3><p class="proof-copy">Contributed to mobile product work in a health-oriented environment where product decisions, delivery discipline, and user experience all had to stay tightly aligned.</p></article>
-            <article class="card proof-card reveal stagger-3"><div class="proof-label">Confidential AI product work</div><h3 class="proof-title">AI assistant for shopping</h3><p class="proof-copy">Built assistant-style shopping and guidance flows designed to help users navigate decisions inside an shopping experience — practical AI inside a real product surface, not a demo in search of a problem.</p></article>
-            <article class="card proof-card reveal stagger-4"><div class="proof-label">Founder-built AI product</div><h3 class="proof-title">Heal</h3><p class="proof-copy">Built an AI-powered breakup support app end-to-end. Useful proof that I do not just integrate models — I shape the product, the user flow, and the value proposition around them.</p></article>
-            <article class="card proof-card reveal stagger-5"><div class="proof-label">Habit and daily-use product work</div><h3 class="proof-title">TWO</h3><p class="proof-copy">Worked on a product centered around habits, reflection, and daily loops — the kind of work that sharpens judgment around retention, behavior, and what makes users actually come back.</p></article>
-            <article class="card proof-card reveal stagger-6"><div class="proof-label">AI Experimentation</div><h3 class="proof-title">Private AI product explorations</h3><p class="proof-copy">Worked on AI-driven chat, guidance, recommendation, and workflow concepts across mobile product contexts, with a focus on making the interaction useful enough to belong in the product long-term.</p></article>
+            <article class="card proof-card reveal stagger-1"><div class="proof-label">Consumer mobile at scale</div><h3 class="proof-title">Freshful by eMAG</h3><p class="proof-copy">Worked on a large consumer grocery app where shipping quality mattered, release pressure was real, and product decisions had to hold up across a live mobile experience used at scale.</p></article>
+            <article class="card proof-card reveal stagger-2"><div class="proof-label">Health-focused product engineering</div><h3 class="proof-title">Zero Longevity</h3><p class="proof-copy">Worked on a health-focused product where mobile UX, product clarity, and delivery discipline all had to stay aligned. The work was not just technical — it had to feel reliable and usable.</p></article>
+            <article class="card proof-card reveal stagger-3"><div class="proof-label">Confidential AI product work</div><h3 class="proof-title">AI assistant for e-grocery</h3><p class="proof-copy">Built assistant-style shopping flows for an e-grocery product to help users make decisions faster inside the app. The challenge was making the AI useful in context, not just adding chat for the sake of it.</p></article>
+            <article class="card proof-card reveal stagger-4"><div class="proof-label">Founder-built AI product</div><h3 class="proof-title">Heal</h3><p class="proof-copy">Built an AI-powered breakup support app end-to-end, from product idea and onboarding to the AI experience itself. Useful proof that I think beyond integration and care about whether the product actually helps.</p></article>
+            <article class="card proof-card reveal stagger-5"><div class="proof-label">AI builders media product</div><h3 class="proof-title">DailyClaw.dev</h3><p class="proof-copy">Built a publication and systems layer around AI builders, agent workflows, and operator patterns. Useful proof that I do not just use AI tools — I study, build around, and communicate the systems behind them.</p></article>
+            <article class="card proof-card reveal stagger-6"><div class="proof-label">Habit and daily-use product work</div><h3 class="proof-title">TWO</h3><p class="proof-copy">Worked on a product built around habits, reflection, and repeat usage. That kind of work sharpens judgment around retention, user friction, and what people will actually return to after the first week.</p></article>
+            <article class="card proof-card reveal stagger-7"><div class="proof-label">Private AI product explorations</div><h3 class="proof-title">Private AI product explorations</h3><p class="proof-copy">Worked on AI-driven chat, guidance, recommendation, and workflow concepts across mobile products. The common thread was always the same: reduce friction, help users make progress, and keep the interaction grounded in the product.</p></article>
+            
           </div>
         </div>
       </section>
@@ -485,9 +512,9 @@ status: focused, pragmatic, production-minded</pre>
             <div class="contact-inner">
               <div class="eyebrow">Contact</div>
               <h2>Need someone who can think in product, architecture, and implementation?</h2>
-              <div class="contact-copy">If your team needs to move faster across Android and iOS, or you need help turning AI ideas into a real mobile product surface, this is the kind of work I do.</div>
+              <div class="contact-copy">No pitch. Just a real conversation about your product, bottleneck, or migration path.</div>
               <div class="actions">
-                <a class="button button-primary" href="mailto:alin.postolache@gmail.com">Email me</a>
+                <a class="button button-primary" href="mailto:alin.postolache@gmail.com">Email me and let's schedule a 30-minute fit call</a>
                 <a class="button button-secondary" href="https://x.com/alincatalin">Find me on X</a>
               </div>
             </div>
@@ -504,7 +531,7 @@ status: focused, pragmatic, production-minded</pre>
       console.assert(document.querySelectorAll('.offer-card').length === 3, 'Expected 3 offer cards');
       console.assert(document.querySelectorAll('.capability-card').length >= 4, 'Expected capability cards');
       console.assert(document.querySelectorAll('.fit-card').length === 2, 'Expected 2 fit cards');
-      console.assert(document.querySelectorAll('.proof-card').length === 6, 'Expected 6 selected work cards');
+      console.assert(document.querySelectorAll('.proof-card').length === 7, 'Expected 7 selected work cards');
 
       if (typeof IntersectionObserver === 'undefined') {
         revealItems.forEach((item) => item.classList.add('is-visible'));
