@@ -106,7 +106,7 @@
     .button-primary:hover { border-color: rgba(209,250,229,0.60); background: rgba(110,231,183,0.20); }
     .button-secondary { background: rgba(255,255,255,0.05); color: #e2e8f0; }
     .button-secondary:hover { border-color: rgba(125,211,252,0.40); background: rgba(125,211,252,0.10); }
-    .problem-grid, .stats-grid, .offers-grid, .capabilities-grid, .fit-grid { display: grid; gap: 16px; }
+    .problem-grid, .stats-grid, .offers-grid, .capabilities-grid, .fit-grid, .work-proof-grid { display: grid; gap: 16px; }
     .problem-grid { max-width: 760px; margin-top: 34px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .card {
       position: relative; overflow: hidden; border: 1px solid var(--border); background: rgba(255,255,255,0.05);
@@ -158,6 +158,7 @@
     .section-header { max-width: 760px; }
     .eyebrow { display: inline-flex; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.05); color: var(--muted-2); font-size: 11px; text-transform: uppercase; letter-spacing: 0.22em; }
     h2 { margin: 20px 0 0; font-size: clamp(32px, 4.5vw, 54px); line-height: 1.08; letter-spacing: -0.03em; }
+    h3 { margin: 16px 0 0; }
     .section-text { margin-top: 18px; font-size: 17px; line-height: 1.9; color: var(--muted-2); }
     .offers-grid { margin-top: 40px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .offer-card { padding: 24px; transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease; }
@@ -184,6 +185,15 @@
     .capability-dot { width: 8px; height: 8px; border-radius: 999px; background: linear-gradient(to right, var(--green), var(--blue), var(--orange)); flex: 0 0 auto; }
     .capability-title { font-weight: 600; color: white; }
     .capability-divider { height: 1px; width: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent); }
+    .work-proof-grid { margin-top: 40px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .proof-card { padding: 24px; transition: transform 220ms ease, border-color 220ms ease, background 220ms ease; }
+    .proof-card:hover { transform: translateY(-3px); border-color: rgba(125,211,252,0.22); background: rgba(255,255,255,0.07); }
+    .proof-label {
+      display: inline-flex; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04); color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em;
+    }
+    .proof-title { margin: 16px 0 0; font-size: 24px; line-height: 1.2; color: white; letter-spacing: -0.02em; }
+    .proof-copy { margin: 14px 0 0; font-size: 15px; line-height: 1.8; color: var(--muted-2); }
     .fit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .fit-card { padding: 28px; }
     .fit-card.good { border-color: rgba(110,231,183,0.20); background: rgba(110,231,183,0.05); }
@@ -215,7 +225,7 @@
     @keyframes pulse { 0%, 100% { opacity: 0.75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 1080px) {
-      .hero, .approach-grid, .work-grid, .offers-grid, .stats-grid, .fit-grid { grid-template-columns: 1fr; }
+      .hero, .approach-grid, .work-grid, .offers-grid, .stats-grid, .fit-grid, .work-proof-grid { grid-template-columns: 1fr; }
       .capabilities-grid, .problem-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 760px) {
@@ -223,7 +233,7 @@
       .section { padding: 34px 0; }
       .topbar { flex-direction: column; align-items: flex-start; }
       .hero { padding-top: 34px; gap: 28px; }
-      .problem-grid, .capabilities-grid, .fit-grid { grid-template-columns: 1fr; }
+      .problem-grid, .capabilities-grid, .fit-grid, .work-proof-grid { grid-template-columns: 1fr; }
       .hero-copy, .section-text, .work-copy, .contact-copy { font-size: 16px; }
       h1 { font-size: 40px; }
       h2 { font-size: 32px; }
@@ -252,8 +262,8 @@
             <div class="brand">
               <div class="brand-mark">A</div>
               <div>
-                <div class="brand-title">Alin Postolache - Mobile + AI Engineering</div>
-                <div class="brand-subtitle">KMP / Compose Multiplatform / Android / iOS / AI Automations & Workflows</div>
+                <div class="brand-title">Alin Postolache — Mobile + AI Engineering</div>
+                <div class="brand-subtitle">KMP / Compose Multiplatform / Android / iOS / AI features, automations & workflows</div>
               </div>
             </div>
             <nav class="nav">
@@ -270,9 +280,7 @@
                 Founder-led mobile AI engineering
               </div>
 
-              <h1>
-                Ship <span class="accent-green">AI features</span> in mobile products without doubling your team.
-              </h1>
+              <h1>Ship <span class="accent-green">AI features</span> in mobile products without doubling your team.</h1>
 
               <p class="hero-copy">
                 I help startups and product teams build practical AI-powered mobile experiences using Kotlin
@@ -296,7 +304,6 @@
             <div class="terminal-wrap reveal stagger-2 is-visible">
               <div class="terminal-glow-left"></div>
               <div class="terminal-glow-right"></div>
-
               <div class="terminal">
                 <div class="terminal-header">
                   <div class="traffic">
@@ -306,32 +313,13 @@
                   </div>
                   <div class="terminal-label">terminal://mobile-ai-operator</div>
                 </div>
-
                 <div class="terminal-body">
-                  <div class="terminal-line" style="animation-delay: 120ms;">
-                    <div><span class="prompt">$</span> <span class="command">whoami</span></div>
-                    <div class="output">senior_mobile_engineer + ai_product_builder</div>
-                  </div>
-                  <div class="terminal-line" style="animation-delay: 220ms;">
-                    <div><span class="prompt">$</span> <span class="command">focus</span></div>
-                    <div class="output">android / ios / kmp / compose / practical ai</div>
-                  </div>
-                  <div class="terminal-line" style="animation-delay: 320ms;">
-                    <div><span class="prompt">$</span> <span class="command">philosophy</span></div>
-                    <div class="output">share code where it creates leverage. stay native where quality matters.</div>
-                  </div>
-                  <div class="terminal-line" style="animation-delay: 420ms;">
-                    <div><span class="prompt">$</span> <span class="command">ideal_clients</span></div>
-                    <div class="output">startups, product teams, mobile-heavy saas, teams adding ai</div>
-                  </div>
-                  <div class="terminal-line" style="animation-delay: 520ms;">
-                    <div><span class="prompt">$</span> <span class="command">anti-patterns</span></div>
-                    <div class="output">architecture theater, fake ai, duplicate platform work</div>
-                  </div>
-                  <div class="terminal-line" style="animation-delay: 620ms;">
-                    <div><span class="prompt">$</span> <span class="command">next_step</span></div>
-                    <div class="output">book a fit call → scope one sharp wedge → ship</div>
-                  </div>
+                  <div class="terminal-line" style="animation-delay: 120ms;"><div><span class="prompt">$</span> <span class="command">whoami</span></div><div class="output">senior_mobile_engineer + ai_product_builder</div></div>
+                  <div class="terminal-line" style="animation-delay: 220ms;"><div><span class="prompt">$</span> <span class="command">focus</span></div><div class="output">android / ios / kmp / compose / practical ai</div></div>
+                  <div class="terminal-line" style="animation-delay: 320ms;"><div><span class="prompt">$</span> <span class="command">philosophy</span></div><div class="output">share code where it creates leverage. stay native where quality matters.</div></div>
+                  <div class="terminal-line" style="animation-delay: 420ms;"><div><span class="prompt">$</span> <span class="command">ideal_clients</span></div><div class="output">startups, product teams, mobile-heavy saas, teams adding ai</div></div>
+                  <div class="terminal-line" style="animation-delay: 520ms;"><div><span class="prompt">$</span> <span class="command">anti-patterns</span></div><div class="output">architecture theater, fake ai, duplicate platform work</div></div>
+                  <div class="terminal-line" style="animation-delay: 620ms;"><div><span class="prompt">$</span> <span class="command">next_step</span></div><div class="output">book a fit call → scope one sharp wedge → ship</div></div>
 
                   <div class="terminal-mode">
                     <div class="label">Current mode</div>
@@ -347,18 +335,9 @@
       <section class="section">
         <div class="container">
           <div class="stats-grid">
-            <div class="stat-card green reveal">
-              <div class="stat-value">10+</div>
-              <div class="stat-label">Years in mobile engineering</div>
-            </div>
-            <div class="stat-card blue reveal stagger-1">
-              <div class="stat-value">Android + iOS</div>
-              <div class="stat-label">Cross-platform without fake shortcuts</div>
-            </div>
-            <div class="stat-card orange reveal stagger-2">
-              <div class="stat-value">AI + product</div>
-              <div class="stat-label">Built for features people actually use</div>
-            </div>
+            <div class="stat-card green reveal"><div class="stat-value">10+</div><div class="stat-label">Years in mobile engineering</div></div>
+            <div class="stat-card blue reveal stagger-1"><div class="stat-value">Android + iOS</div><div class="stat-label">Cross-platform without fake shortcuts</div></div>
+            <div class="stat-card orange reveal stagger-2"><div class="stat-value">AI + product</div><div class="stat-label">Built for features people actually use</div></div>
           </div>
         </div>
       </section>
@@ -368,21 +347,13 @@
           <div class="section-header reveal">
             <div class="eyebrow">Offers</div>
             <h2>Start narrow. Ship fast. Expand only when the product earns it.</h2>
-            <p class="section-text">
-              The model is simple: begin with a clear technical wedge, validate real product value, then scale the implementation without accumulating platform debt.
-            </p>
+            <p class="section-text">The model is simple: begin with a clear technical wedge, validate real product value, then scale the implementation without accumulating platform debt.</p>
           </div>
 
           <div class="offers-grid">
             <article class="card offer-card reveal">
               <div class="offer-glow green"></div>
-              <div class="offer-head">
-                <div>
-                  <div class="offer-title">Mobile AI Kickstart</div>
-                  <div class="offer-duration">1–2 weeks</div>
-                </div>
-                <div class="price-pill">€3k–€6k</div>
-              </div>
+              <div class="offer-head"><div><div class="offer-title">Mobile AI Kickstart</div><div class="offer-duration">1–2 weeks</div></div><div class="price-pill">€3k–€6k</div></div>
               <ul class="list-reset">
                 <li class="list-item"><span class="bullet"></span><span>Audit your current mobile stack and delivery bottlenecks</span></li>
                 <li class="list-item"><span class="bullet"></span><span>Identify the highest-leverage AI feature worth shipping first</span></li>
@@ -393,13 +364,7 @@
 
             <article class="card offer-card featured reveal stagger-1">
               <div class="offer-glow blue"></div>
-              <div class="offer-head">
-                <div>
-                  <div class="offer-title">Fractional Mobile + AI Lead</div>
-                  <div class="offer-duration">Monthly</div>
-                </div>
-                <div class="price-pill">€6k–€12k/mo</div>
-              </div>
+              <div class="offer-head"><div><div class="offer-title">Fractional Mobile + AI Lead</div><div class="offer-duration">Monthly</div></div><div class="price-pill">€8k/mo</div></div>
               <ul class="list-reset">
                 <li class="list-item"><span class="bullet"></span><span>Hands-on implementation, architecture, and technical product guidance</span></li>
                 <li class="list-item"><span class="bullet"></span><span>Ship AI workflows like voice, summaries, chat, search, copilots</span></li>
@@ -410,13 +375,7 @@
 
             <article class="card offer-card reveal stagger-2">
               <div class="offer-glow orange"></div>
-              <div class="offer-head">
-                <div>
-                  <div class="offer-title">Platform Migration Sprint</div>
-                  <div class="offer-duration">Project-based</div>
-                </div>
-                <div class="price-pill">€8k–€20k</div>
-              </div>
+              <div class="offer-head"><div><div class="offer-title">Platform Migration Sprint</div><div class="offer-duration">Project-based</div></div><div class="price-pill">€8k–€20k+</div></div>
               <ul class="list-reset">
                 <li class="list-item"><span class="bullet"></span><span>Shared domain and data layer strategy for Android + iOS</span></li>
                 <li class="list-item"><span class="bullet"></span><span>Proof-of-concept module to validate migration risk early</span></li>
@@ -434,9 +393,7 @@
             <div class="section-header reveal">
               <div class="eyebrow">Approach</div>
               <h2>A strong point of view beats a generic service menu.</h2>
-              <p class="section-text">
-                Most teams either bolt on a fake AI feature nobody retains, or overbuild mobile architecture before proving value. The better path is narrower: choose the right workflow, share code where it creates leverage, and keep native control where quality matters.
-              </p>
+              <p class="section-text">Most teams either bolt on a fake AI feature nobody retains, or overbuild mobile architecture before proving value. The better path is narrower: choose the right workflow, share code where it creates leverage, and keep native control where quality matters.</p>
             </div>
 
             <div class="capabilities-grid">
@@ -449,6 +406,25 @@
               <div class="card capability-card reveal stagger-6"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Feature prototyping and migration planning</span></div><div class="capability-divider"></div></div>
               <div class="card capability-card reveal stagger-7"><div class="capability-head"><span class="capability-dot"></span><span class="capability-title">Senior technical guidance for product teams</span></div><div class="capability-divider"></div></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="eyebrow">Selected work</div>
+            <h2>Proof, not promises.</h2>
+            <p class="section-text">A mix of large-scale product engineering, founder-built apps, and practical AI work inside real mobile experiences.</p>
+          </div>
+
+          <div class="work-proof-grid">
+            <article class="card proof-card reveal stagger-1"><div class="proof-label">Consumer mobile at scale</div><h3 class="proof-title">Freshful by eMAG</h3><p class="proof-copy">Worked on the biggest e-groceries mobile with production constraints, fast iteration, and the kind of engineering quality bar that only shows up when the app actually matters to the business.</p></article>
+            <article class="card proof-card reveal stagger-2"><div class="proof-label">Health-focused product engineering</div><h3 class="proof-title">Zero Longevity</h3><p class="proof-copy">Contributed to mobile product work in a health-oriented environment where product decisions, delivery discipline, and user experience all had to stay tightly aligned.</p></article>
+            <article class="card proof-card reveal stagger-3"><div class="proof-label">Confidential AI product work</div><h3 class="proof-title">AI assistant for shopping</h3><p class="proof-copy">Built assistant-style shopping and guidance flows designed to help users navigate decisions inside an shopping experience — practical AI inside a real product surface, not a demo in search of a problem.</p></article>
+            <article class="card proof-card reveal stagger-4"><div class="proof-label">Founder-built AI product</div><h3 class="proof-title">Heal</h3><p class="proof-copy">Built an AI-powered breakup support app end-to-end. Useful proof that I do not just integrate models — I shape the product, the user flow, and the value proposition around them.</p></article>
+            <article class="card proof-card reveal stagger-5"><div class="proof-label">Habit and daily-use product work</div><h3 class="proof-title">TWO</h3><p class="proof-copy">Worked on a product centered around habits, reflection, and daily loops — the kind of work that sharpens judgment around retention, behavior, and what makes users actually come back.</p></article>
+            <article class="card proof-card reveal stagger-6"><div class="proof-label">AI Experimentation</div><h3 class="proof-title">Private AI product explorations</h3><p class="proof-copy">Worked on AI-driven chat, guidance, recommendation, and workflow concepts across mobile product contexts, with a focus on making the interaction useful enough to belong in the product long-term.</p></article>
           </div>
         </div>
       </section>
@@ -486,17 +462,10 @@
               <div>
                 <div class="work-pill">How I work</div>
                 <div class="work-title">No architecture theater. No AI-for-PR fluff. Just shipped product.</div>
-                <div class="work-copy">
-                  The point is not to make your stack sound futuristic. The point is to reduce wasted effort, move faster across Android and iOS, and ship AI features that earn their place in the product.
-                </div>
+                <div class="work-copy">The point is not to make your stack sound futuristic. The point is to reduce wasted effort, move faster across Android and iOS, and ship AI features that earn their place in the product.</div>
               </div>
-
               <div class="work-terminal">
-                <div class="traffic">
-                  <span class="t-orange"></span>
-                  <span class="t-green"></span>
-                  <span class="t-blue"></span>
-                </div>
+                <div class="traffic"><span class="t-orange"></span><span class="t-green"></span><span class="t-blue"></span></div>
                 <pre>$ identify_real_user_problem
 $ choose_narrow_ai_workflow
 $ define_shared_vs_native_boundary
@@ -516,13 +485,10 @@ status: focused, pragmatic, production-minded</pre>
             <div class="contact-inner">
               <div class="eyebrow">Contact</div>
               <h2>Need someone who can think in product, architecture, and implementation?</h2>
-              <div class="contact-copy">
-                If your team needs to move faster across Android and iOS, or you need help turning AI ideas into a real mobile product surface, this is the kind of work I do.
-              </div>
-
+              <div class="contact-copy">If your team needs to move faster across Android and iOS, or you need help turning AI ideas into a real mobile product surface, this is the kind of work I do.</div>
               <div class="actions">
-                <a class="button button-primary" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
-                <a class="button button-secondary" href="#">LinkedIn / X / Calendly</a>
+                <a class="button button-primary" href="mailto:alin.postolache@gmail.com">Email me</a>
+                <a class="button button-secondary" href="https://x.com/alincatalin">Find me on X</a>
               </div>
             </div>
           </div>
@@ -538,6 +504,7 @@ status: focused, pragmatic, production-minded</pre>
       console.assert(document.querySelectorAll('.offer-card').length === 3, 'Expected 3 offer cards');
       console.assert(document.querySelectorAll('.capability-card').length >= 4, 'Expected capability cards');
       console.assert(document.querySelectorAll('.fit-card').length === 2, 'Expected 2 fit cards');
+      console.assert(document.querySelectorAll('.proof-card').length === 6, 'Expected 6 selected work cards');
 
       if (typeof IntersectionObserver === 'undefined') {
         revealItems.forEach((item) => item.classList.add('is-visible'));
